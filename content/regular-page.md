@@ -47,4 +47,4 @@ Here is a link to the
 
 And here is an image:
 
-![A random image from unsplash](https://source.unsplash.com/random/800x600)
+![Placeholder Image](/images/placeholder.png)
