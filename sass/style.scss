@@ -1,10 +1,42 @@
 @import 'reset';
+@import 'colors';
+
+// Mixin to generate CSS variables from a palette
+@mixin theme-vars($palette) {
+  --bg-color: #{map-get($palette, bg)};
+  --fg-color: #{map-get($palette, fg)};
+  --comment-color: #{map-get($palette, comment)};
+  --blue-color: #{map-get($palette, blue)};
+  --cyan-color: #{map-get($palette, cyan)};
+  --green-color: #{map-get($palette, green)};
+  --orange-color: #{map-get($palette, orange)};
+  --red-color: #{map-get($palette, red)};
+  --yellow-color: #{map-get($palette, yellow)};
+  --magenta-color: #{map-get($palette, magenta)};
+}
+
+// Generate theme classes
+@each $name, $palette in $palettes {
+  .theme-#{$name} {
+    @include theme-vars($palette);
+  }
+}
 
 body {
   font-family: 'Source Code Pro', monospace;
   max-width: 800px;
   margin: 0 auto;
   padding: 1em;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+a {
+  color: var(--blue-color);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 p {
@@ -18,30 +50,47 @@ h4,
 h5,
 h6 {
   margin-bottom: 1rem;
+  color: var(--blue-color);
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* Align items to the right */
   align-items: center; /* Vertically align items */
-  padding: 1em; /* Add padding to header */
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
   margin-left: 1em; /* Add some spacing between nav links */
+  color: var(--fg-color);
 }
 
 code {
   padding: 0px 10px;
   border-radius: 5px;
-  background-color: #c1c1c1;
+  background-color: var(--fg-color);
+  color: var(--bg-color);
 }
 
 pre {
   padding: 1em;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--cyan-color);
 }
 
 pre > code {
   background-color: transparent;
+  color: var(--fg-color);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--comment-color);
+  margin: 1em 0;
 }

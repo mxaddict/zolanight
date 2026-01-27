@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
   </head>
-  <body>
+  <body class="theme-{{ config.extra.zolanight.theme | default(value="tokyonight") }}">
     {% set root_section = get_section(path="_index.md") %}
     <header>
       <nav>
