@@ -106,3 +106,10 @@ blockquote {
   margin: 1em 0;
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+img {
+  border: 1px solid var(--cyan-color);
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
