@@ -1,13 +1,8 @@
 +++
-title = "Theme Demo"
-date = 2026-01-28
-description = "A demonstration of the ZolaNight theme features."
-taxonomies = { tags = ["demo", "theme"] }
+title = "Heading 1: Regular page"
 +++
 
-This post demonstrates the features of the ZolaNight theme.
-
-# Heading 1
+This page demonstrates the features of the ZolaNight theme.
 
 This is a paragraph of text. You can write about anything you want here.
 

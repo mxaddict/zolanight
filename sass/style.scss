@@ -65,8 +65,12 @@ nav {
 }
 
 nav a {
-  margin-left: 1em; /* Add some spacing between nav links */
-  color: var(--fg-color);
+  color: var(--orange-color);
+}
+
+nav a,
+nav span {
+  margin: 0 0.5em; /* Add some spacing between nav links */
 }
 
 code {
@@ -86,11 +90,12 @@ pre {
 pre > code {
   background-color: transparent;
   color: var(--fg-color);
+  padding: 0;
 }
 
 hr {
   border: 0;
   height: 1px;
-  background: var(--comment-color);
+  background: var(--cyan-color);
   margin: 1em 0;
 }

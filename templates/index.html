@@ -3,9 +3,19 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
-{{ section.content | safe }}
+<section>
+  {% if section.title %}
+  <h1>{{ section.title }}</h1>
+  {% endif %}
+  {% if section.date %}
+  <p>Published on: <time>{{ section.date | date(format="%Y-%m-%d") }}</time></p>
+  {% endif %}
+  <div>
+    {{ section.content | safe }}
+  </div>
+</section>
 
-{% if config.extra.list_homepage_posts | default(value=true) %}
+{% if config.extra.home_list_latest_blog_posts | default(value=true) %}
 <h2>Latest Posts</h2>
 {% set blog_section = get_section(path="blog/_index.md") %}
 {% if blog_section %}

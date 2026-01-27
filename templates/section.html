@@ -8,13 +8,23 @@
   {{ section.content | safe }}
 </div>
 <ul>
-  {% for page in section.pages %}
+  {% for page in paginator.pages %}
   <li>
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
     {% if page.date %}
-    - {{ page.date | date(format="%Y-%m-%d") }}
+    <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
     {% endif %}
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
   </li>
   {% endfor %}
 </ul>
+
+<nav>
+  {% if paginator.previous %}
+  <a href="{{ paginator.previous }}">&lt; Prev</a>
+  {% endif %}
+  <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+  {% if paginator.next %}
+  <a href="{{ paginator.next }}">Next &gt;</a>
+  {% endif %}
+</nav>
 {% endblock content %}
