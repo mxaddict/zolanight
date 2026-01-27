@@ -1,0 +1,8 @@
+name = "barebones"
+description = "A barebones Zola theme with no styles, just content rendering."
+homepage = "https://www.codedmaster.com"
+min_version = "0.18.0"
+
+[author]
+name = "mxaddict"
+homepage = "https://www.codedmaster.com"

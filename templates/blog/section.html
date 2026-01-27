@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+<div>
+  {{ section.content | safe }}
+</div>
+
+<ul>
+  {% for page in paginator.pages %}
+  <li>
+    {% if page.date %}
+    {{ page.date | date(format="%Y-%m-%d") }} -
+    {% endif %}
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<nav>
+  {% if paginator.previous %}
+  <a href="{{ paginator.previous }}">Previous</a>
+  {% endif %}
+  Page {{ paginator.current_index }} of {{ paginator.number_pagers }}
+  {% if paginator.next %}
+  <a href="{{ paginator.next }}">Next</a>
+  {% endif %}
+</nav>
+{% endblock content %}

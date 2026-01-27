@@ -1,0 +1,47 @@
+@import 'reset';
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align items */
+  padding: 1em; /* Add padding to header */
+}
+
+nav a {
+  margin-left: 1em; /* Add some spacing between nav links */
+}
+
+code {
+  padding: 0px 10px;
+  border-radius: 5px;
+  background-color: #c1c1c1;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 5px;
+}
+
+pre > code {
+  background-color: transparent;
+}

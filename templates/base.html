@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    {% if page %}
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}">
+        {% endif %}
+        {% if page.taxonomies.tags %}
+            <meta name="keywords" content="{% for tag in page.taxonomies.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}">
+        {% endif %}
+    {% elif section %}
+        {% if section.description %}
+            <meta name="description" content="{{ section.description }}">
+        {% endif %}
+        {# Sections usually don't have taxonomies directly, but if they did, the logic would be similar #}
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+  </head>
+  <body>
+    {% set root_section = get_section(path="_index.md") %}
+    <header>
+      <nav>
+        <a href="/">/home/</a>
+
+        {# Render subsections #}
+        {% for subsection_path in root_section.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        <a href="{{ subsection.permalink }}">{{ subsection.permalink | replace(from=config.base_url, to="") }}</a>
+        {% endfor %}
+
+        {# Render pages at the root #}
+        {% for page in root_section.pages %}
+        <a href="{{ page.permalink }}">{{ page.permalink | replace(from=config.base_url, to="") }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <hr>
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+    <hr>
+    <footer>
+      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/mxaddict/zolanight">ZolaNight Theme</a></p>
+    </footer>
+  </body>
+</html>
