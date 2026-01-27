@@ -4,12 +4,12 @@
 
 {% block content %}
 <article>
-    <h1>{{ page.title }}</h1>
-    {% if page.date %}
-    <p>Published on: {{ page.date | date(format="%Y-%m-%d") }}</p>
-    {% endif %}
-    <div>
-        {{ page.content | safe }}
-    </div>
+  <h1>{{ page.title }}</h1>
+  {% if page.date %}
+  <p>Published on: <time>{{ page.date | date(format="%Y-%m-%d") }}</time></p>
+  {% endif %}
+  <div>
+    {{ page.content | safe }}
+  </div>
 </article>
 {% endblock content %}

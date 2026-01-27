@@ -1,31 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
-
 {% block content %}
-<h1>{{ section.title }}</h1>
-<div>
-  {{ section.content | safe }}
-</div>
+<section>
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
 
-<ul>
-  {% for page in paginator.pages %}
-  <li>
-    {% if page.date %}
-    {{ page.date | date(format="%Y-%m-%d") }} -
+    <ul>
+        {% for page in paginator.pages %}
+            <li>
+                <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if paginator.has_pages %}
+        <nav>
+            {% if paginator.previous %}
+                <a href="{{ paginator.previous.permalink }}">Previous</a>
+            {% endif %}
+            {% if paginator.next %}
+                <a href="{{ paginator.next.permalink }}">Next</a>
+            {% endif %}
+        </nav>
     {% endif %}
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
-
-<nav>
-  {% if paginator.previous %}
-  <a href="{{ paginator.previous }}">Previous</a>
-  {% endif %}
-  Page {{ paginator.current_index }} of {{ paginator.number_pagers }}
-  {% if paginator.next %}
-  <a href="{{ paginator.next }}">Next</a>
-  {% endif %}
-</nav>
+</section>
 {% endblock content %}
