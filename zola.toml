@@ -1,27 +1,15 @@
-base_url = "zolanight.codedmaster.com"
-title = "ZolaNight Theme Demo"
-description = "A demo site for the ZolaNight theme."
-compile_sass = true
-
-generate_feeds = true
-feed_limit = 10
-feed_filenames = ["atom.xml"]
-
-taxonomies = [{ name = "tags" }]
+base_url = "zolanight.codedmaster.com"               # Your site's base URL
+title = "ZolaNight Theme Demo"                       # Your site's title
+description = "A demo site for the ZolaNight theme." # Your site's description
+compile_sass = true                                  # Enable Sass compilation
+generate_feeds = true                                # Generate RSS/Atom feeds
+feed_limit = 10                                      # Number of items in feeds
+feed_filenames = ["atom.xml"]                        # Feed filenames
+taxonomies = [{ name = "tags" }]                     # Enable tags taxonomy
 
 [markdown.highlighting]
-theme = "catppuccin-mocha"
-
-[extra]
-author_name = "mxaddict"
-author_url = "https://www.codedmaster.com"
-list_pages = false
+theme = "catppuccin-mocha" # Code highlighting theme
 
 [extra.zolanight]
-theme = "tokyonight"
-
-header_nav = [
-  { url = "/", name_en = "/home/" },
-  { url = "/about/", name_en = "/about/" },
-  { url = "/blog/", name_en = "/blog/" },
-]
+theme = "tokyonight"               # Default theme, override as shown above
+home_list_latest_blog_posts = true # Set to false to disable listing latest blog posts on the homepage
