@@ -74,8 +74,9 @@ theme = "catppuccin-mocha" # Code highlighting theme
 
 [extra.zolanight]
 theme = "tokyonight"               # Default theme, override as shown above
-home_list_latest_blog_posts = true # Set false to disable listing latest posts on the homepage
+home_list_latest_blog_posts = true # Toggles latest posts on homepage
 google_analytics_id = ""           # Set a GA ID to use with analytics snippet
+ko_fi_url = ""                     # Link to your Ko-fi page for donations.
 ```
 
 ## License

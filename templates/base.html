@@ -61,6 +61,9 @@
     <hr>
     <footer>
       <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/mxaddict/zolanight">ZolaNight Theme</a></p>
+      {% if config.extra.zolanight.ko_fi_url %}
+      <p>Support this content on <a href="{{ config.extra.zolanight.ko_fi_url }}">Ko-fi</a>.</p>
+      {% endif %}
     </footer>
   </body>
 </html>
