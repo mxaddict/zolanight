@@ -1,6 +1,6 @@
-name = "barebones"
-description = "A barebones Zola theme with no styles, just content rendering."
-homepage = "https://www.codedmaster.com"
+name = "zolanight"
+description = "ZolaNight is a dark theme inspired by the Tokyo Night color palette"
+homepage = "https://zolanight.codedmaster.com"
 min_version = "0.18.0"
 
 [author]
