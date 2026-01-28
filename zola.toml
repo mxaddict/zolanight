@@ -1,17 +1,17 @@
-base_url = "https://zolanight.codedmaster.com"       # Your site's base URL
-title = "ZolaNight Theme Demo"                       # Your site's title
-description = "A demo site for the ZolaNight theme." # Your site's description
-compile_sass = true                                  # Enable Sass compilation
-generate_feeds = true                                # Generate RSS/Atom feeds
-feed_limit = 10                                      # Number of items in feeds
-feed_filenames = ["atom.xml"]                        # Feed filenames
-taxonomies = [{ name = "tags" }]                     # Enable tags taxonomy
+base_url = "https://zolanight.codedmaster.com"
+title = "ZolaNight Theme Demo"
+description = "A demo site for the ZolaNight theme."
+compile_sass = true
+generate_feeds = true
+feed_limit = 10
+feed_filenames = ["atom.xml"]
+taxonomies = [{ name = "tags" }]
 
 [markdown.highlighting]
 theme = "catppuccin-mocha" # Code highlighting theme
 
 [extra.zolanight]
-theme = "tokyonight"               # Default theme, override as shown above
-home_list_latest_blog_posts = true # Toggles latest posts on homepage
-google_analytics_id = ""           # Set a GA ID to use with analytics snippet
-ko_fi_url = ""                     # Link to your Ko-fi page for donations.
+theme = "tokyonight"
+home_list_latest_blog_posts = true
+google_analytics_id = "G-7NC6GLJCFS"
+ko_fi_url = "https://ko-fi.com/mxaddict"
