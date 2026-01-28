@@ -1,5 +1,6 @@
 +++
 title = "Heading 1: Regular page"
+taxonomies = { tags = ["zola", "theme", "test"] }
 +++
 
 This page demonstrates the features of the ZolaNight theme.
