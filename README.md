@@ -69,3 +69,7 @@ theme = "catppuccin-mocha" # Code highlighting theme
 theme = "tokyonight"               # Default theme, override as shown above
 home_list_latest_blog_posts = true # Set false to disable listing latest posts on the homepage
 ```
+
+## License
+
+This theme is licensed under the [MIT License](LICENSE).
