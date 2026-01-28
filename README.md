@@ -70,6 +70,10 @@ theme = "tokyonight"               # Default theme, override as shown above
 home_list_latest_blog_posts = true # Set false to disable listing latest posts on the homepage
 ```
 
+## Live Demo
+
+Explore a live demo of the ZolaNight theme here: [https://zolanight.codedmaster.com](https://zolanight.codedmaster.com)
+
 ## License
 
 This theme is licensed under the [MIT License](LICENSE).
