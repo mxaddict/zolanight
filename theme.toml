@@ -1,7 +1,10 @@
 name = "zolanight"
 description = "ZolaNight is a dark theme inspired by the Tokyo Night color palette"
-homepage = "https://zolanight.codedmaster.com"
+homepage = "https://github.com/mxaddict/zolanight"
 min_version = "0.18.0"
+license = "MIT"
+tags = ["dark", "blog", "responsive", "syntax-highlighting", "tokyo-night"]
+demo = "https://zolanight.codedmaster.com"
 
 [author]
 name = "mxaddict"
