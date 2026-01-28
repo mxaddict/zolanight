@@ -53,7 +53,7 @@ designed to be lightweight and focus on clear content presentation.
 The `zola.toml` file contains the following theme-specific configurations:
 
 ```toml
-base_url = "zolanight.codedmaster.com"               # Your site's base URL
+base_url = "https://zolanight.codedmaster.com"       # Your site's base URL
 title = "ZolaNight Theme Demo"                       # Your site's title
 description = "A demo site for the ZolaNight theme." # Your site's description
 compile_sass = true                                  # Enable Sass compilation
@@ -73,3 +73,4 @@ home_list_latest_blog_posts = true # Set false to disable listing latest posts o
 ## License
 
 This theme is licensed under the [MIT License](LICENSE).
+
