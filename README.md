@@ -5,6 +5,13 @@
 [Tokyo Night](https://github.com/folke/tokyonight.nvim) color palette. It's
 designed to be lightweight and focus on clear content presentation.
 
+![Demo Screenshot](screenshot.png)
+
+## Live Demo
+
+Explore a live demo of the ZolaNight theme here:
+[https://zolanight.codedmaster.com](https://zolanight.codedmaster.com)
+
 ## Features
 
 - **Dark Themes:** Offers multiple dark color schemes: `tokyonight` (default),
@@ -69,10 +76,6 @@ theme = "catppuccin-mocha" # Code highlighting theme
 theme = "tokyonight"               # Default theme, override as shown above
 home_list_latest_blog_posts = true # Set false to disable listing latest posts on the homepage
 ```
-
-## Live Demo
-
-Explore a live demo of the ZolaNight theme here: [https://zolanight.codedmaster.com](https://zolanight.codedmaster.com)
 
 ## License
 
