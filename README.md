@@ -75,6 +75,7 @@ theme = "catppuccin-mocha" # Code highlighting theme
 [extra.zolanight]
 theme = "tokyonight"               # Default theme, override as shown above
 home_list_latest_blog_posts = true # Set false to disable listing latest posts on the homepage
+google_analytics_id = ""           # Set a GA ID to use with analytics snippet
 ```
 
 ## License
