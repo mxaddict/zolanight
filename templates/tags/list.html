@@ -5,8 +5,8 @@
 {% block content %}
 <h1>Tags</h1>
 <ul>
-    {% for term in terms %}
-    <li><a href="{{ term.permalink }}">{{ term.name }} ({{ term.pages | length }})</a></li>
-    {% endfor %}
+  {% for term in terms %}
+  <li><a href="{{ term.permalink }}">{{ term.name }} ({{ term.pages | length }})</a></li>
+  {% endfor %}
 </ul>
 {% endblock content %}

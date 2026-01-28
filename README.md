@@ -73,4 +73,3 @@ home_list_latest_blog_posts = true # Set false to disable listing latest posts o
 ## License
 
 This theme is licensed under the [MIT License](LICENSE).
-
