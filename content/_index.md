@@ -1,5 +1,6 @@
 +++
 title = "Welcome to ZolaNight"
+description = "ZolaNight is a zola theme inspired by tokyonight color palette"
 +++
 
 You can find the source code for the theme on

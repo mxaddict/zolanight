@@ -1,5 +1,6 @@
 +++
 title = "Heading 1: Regular page"
+description = "Sample description"
 taxonomies = { tags = ["zola", "theme", "test"] }
 +++
 
