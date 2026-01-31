@@ -22,10 +22,12 @@
 <ul>
   {% for page in blog_section.pages | slice(end=5) %}
   <li>
-    {% if page.date %}
-    <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-    {% endif %}
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
+    <article>
+      {% if page.date %}
+      <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+      {% endif %}
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </article>
   </li>
   {% endfor %}
 </ul>

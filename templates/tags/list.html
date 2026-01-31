@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>Tags</h1>
-<ul>
+<ul class="tags">
   {% for term in terms %}
   <li><a href="{{ term.permalink }}">#{{ term.name }} ({{ term.pages | length }})</a></li>
   {% endfor %}

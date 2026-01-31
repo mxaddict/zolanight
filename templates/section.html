@@ -12,22 +12,19 @@
   <li>
     <article>
       <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-      <p>
-        {% if page.date %}
-        <p>published: <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time></p>
-        {% endif %}
-        {% if page.description %}
-        {{ page.description }}
-        {% endif %}
-      </p>
+      {% if page.date %}
+      <p>published: <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time></p>
+      {% endif %}
       {% if page.taxonomies.tags %}
       <p class="tags">
-        tags: [
-        {% for tag in page.taxonomies.tags %}
-        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
-        ]
-      </p>
+      tags: [
+      {% for tag in page.taxonomies.tags %}
+      <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+      ]
+      {% endif %}
+      {% if page.description %}
+      <p>{{ page.description }}</p>
       {% endif %}
     </article>
   </li>
