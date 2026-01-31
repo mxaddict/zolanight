@@ -54,6 +54,39 @@ h6 {
   margin-bottom: 1rem;
 }
 
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+  color: var(--cyan-color);
+}
+
+h1:before {
+  content: '# ';
+}
+
+h2:before {
+  content: '## ';
+}
+
+h3:before {
+  content: '### ';
+}
+
+h4:before {
+  content: '#### ';
+}
+
+h5:before {
+  content: '##### ';
+}
+
+h6:before {
+  content: '###### ';
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -132,4 +165,18 @@ img {
   border-radius: 5px;
   max-width: 100%;
   height: auto;
+}
+
+.tags a {
+  color: var(--green-color);
+}
+
+/* Custom styles for the blog post list */
+ul.blog {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0;
+}
+
+ul.blog li {
+  position: relative;
 }

@@ -7,13 +7,29 @@
 <div>
   {{ section.content | safe }}
 </div>
-<ul>
+<ul class="blog">
   {% for page in paginator.pages %}
   <li>
-    {% if page.date %}
-    <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-    {% endif %}
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
+    <article>
+      <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      <p>
+        {% if page.date %}
+        <p>published: <time datetime="{{ page.date | date(format="%Y-%m-%d") }}">{{ page.date | date(format="%Y-%m-%d") }}</time></p>
+        {% endif %}
+        {% if page.description %}
+        {{ page.description }}
+        {% endif %}
+      </p>
+      {% if page.taxonomies.tags %}
+      <p class="tags">
+        tags: [
+        {% for tag in page.taxonomies.tags %}
+        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        ]
+      </p>
+      {% endif %}
+    </article>
   </li>
   {% endfor %}
 </ul>

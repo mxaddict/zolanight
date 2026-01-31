@@ -9,7 +9,7 @@
   <p>published: <time>{{ page.date | date(format="%Y-%m-%d") }}</time></p>
   {% endif %}
   {% if page.taxonomies.tags %}
-  <p>
+  <p class="tags">
   tags: [
   {% for tag in page.taxonomies.tags %}
   <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>{% if loop.index < page.taxonomies.tags | length %}, {% endif %}
