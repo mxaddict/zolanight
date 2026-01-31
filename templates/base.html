@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% if config.extra.zolanight.google_analytics_id %}
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.zolanight.google_analytics_id }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '{{ config.extra.zolanight.google_analytics_id }}');
-    </script>
-    {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     {% if page %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
@@ -29,9 +19,31 @@
     <meta name="keywords" content="{% for tag in section.taxonomies.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}">
     {% endif %}
     {% endif %}
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+    {% if config.extra.zolanight.google_analytics_id %}
+    <!-- Delayed Google Analytics loading -->
+    <script>
+    const loadGtag = () => {
+      // Define dataLayer and gtag function
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ config.extra.zolanight.google_analytics_id }}');
+
+      // Create script element and append to head
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.zolanight.google_analytics_id }}";
+      script.defer = true;
+      document.head.appendChild(script);
+    };
+
+    // Add listeners to load on first user interaction.
+    // The { once: true } option automatically removes the listener after it runs.
+    window.addEventListener('scroll', loadGtag, { once: true });
+    window.addEventListener('mousemove', loadGtag, { once: true });
+    window.addEventListener('touchstart', loadGtag, { once: true });
+    </script>
+    {% endif %}
   </head>
   <body class="theme-{{ config.extra.zolanight.theme | default(value="tokyonight") }}">
     {% set root_section = get_section(path="_index.md") %}
