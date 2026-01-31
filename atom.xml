@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>ZolaNight Theme Demo</title>
+    <subtitle>A demo site for the ZolaNight theme.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://zolanight.codedmaster.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-28T00:00:00+00:00</updated>
+    <id>https://zolanight.codedmaster.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Sample Post 1</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-1/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-1/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-1/">&lt;p&gt;This is the content of sample post 1.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 2</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-2/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-2/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-2/">&lt;p&gt;This is the content of sample post 2.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 3</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-3/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-3/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-3/">&lt;p&gt;This is the content of sample post 3.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 4</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-4/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-4/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-4/">&lt;p&gt;This is the content of sample post 4.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 5</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-5/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-5/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-5/">&lt;p&gt;This is the content of sample post 5.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 6</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-6/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-6/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-6/">&lt;p&gt;This is the content of sample post 6.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 7</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-7/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-7/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-7/">&lt;p&gt;This is the content of sample post 7.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 8</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-8/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-8/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-8/">&lt;p&gt;This is the content of sample post 8.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Sample Post 9</title>
+        <published>2026-01-28T00:00:00+00:00</published>
+        <updated>2026-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zolanight.codedmaster.com/blog/sample-post-9/"/>
+        <id>https://zolanight.codedmaster.com/blog/sample-post-9/</id>
+        
+        <content type="html" xml:base="https://zolanight.codedmaster.com/blog/sample-post-9/">&lt;p&gt;This is the content of sample post 9.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
