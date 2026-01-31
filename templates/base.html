@@ -14,12 +14,6 @@
     {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
     {% if page %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
@@ -31,8 +25,11 @@
     {% if section.description %}
     <meta name="description" content="{{ section.description }}">
     {% endif %}
-    {# Sections usually don't have taxonomies directly, but if they did, the logic would be similar #}
+    {% if section.taxonomies.tags %}
+    <meta name="keywords" content="{% for tag in section.taxonomies.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}">
     {% endif %}
+    {% endif %}
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
   </head>
