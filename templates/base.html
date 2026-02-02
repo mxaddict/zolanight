@@ -27,25 +27,21 @@
     {% if config.extra.zolanight.google_analytics_id %}
     <!-- Delayed Google Analytics loading -->
     <script>
-    const loadGtag = () => {
-      // Define dataLayer and gtag function
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ config.extra.zolanight.google_analytics_id }}');
+      const loadGtag = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ config.extra.zolanight.google_analytics_id }}');
 
-      // Create script element and append to head
-      const script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.zolanight.google_analytics_id }}";
-      script.defer = true;
-      document.head.appendChild(script);
-    };
+        const script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id={{ config.extra.zolanight.google_analytics_id }}";
+        script.defer = true;
+        document.head.appendChild(script);
+      };
 
-    // Add listeners to load on first user interaction.
-    // The { once: true } option automatically removes the listener after it runs.
-    window.addEventListener('scroll', loadGtag, { once: true });
-    window.addEventListener('mousemove', loadGtag, { once: true });
-    window.addEventListener('touchstart', loadGtag, { once: true });
+      window.addEventListener('scroll', loadGtag, { once: true });
+      window.addEventListener('mousemove', loadGtag, { once: true });
+      window.addEventListener('touchstart', loadGtag, { once: true });
     </script>
     {% endif %}
   </head>
