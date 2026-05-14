@@ -49,7 +49,7 @@
     {% set root_section = get_section(path="_index.md") %}
     <header>
       <nav>
-        <a href="/">/home/</a>
+        <a href="{{ config.base_url }}">/home/</a>
 
         {# Render subsections #}
         {% for subsection_path in root_section.subsections %}
