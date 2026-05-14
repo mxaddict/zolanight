@@ -44,6 +44,7 @@
       window.addEventListener('touchstart', loadGtag, { once: true });
     </script>
     {% endif %}
+    {% block extra_head %}{% endblock extra_head %}
   </head>
   <body class="theme-{{ config.extra.zolanight.theme | default(value="tokyonight") }}">
     {% set root_section = get_section(path="_index.md") %}
