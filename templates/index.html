@@ -7,9 +7,6 @@
   {% if section.title %}
   <h1>{{ section.title }}</h1>
   {% endif %}
-  {% if section.date %}
-  <p>Published on: <time>{{ section.date | date(format="%Y-%m-%d") }}</time></p>
-  {% endif %}
   <div>
     {{ section.content | safe }}
   </div>
@@ -20,7 +17,7 @@
 {% set blog_section = get_section(path="blog/_index.md") %}
 {% if blog_section %}
 <ul>
-  {% for page in blog_section.pages | slice(end=5) %}
+  {% for page in blog_section.pages[:5] %}
   <li>
     <article>
       {% if page.date %}
